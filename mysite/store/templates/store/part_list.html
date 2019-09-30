@@ -1,0 +1,10 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+{% for part in parts %}
+<div>
+    <h6><a href="{% url 'part_detail' pk=part.pk %}">{{ part.name }}</a></h6>
+    <p>{{ part.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
+{% endblock %}
